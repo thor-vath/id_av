@@ -6,6 +6,9 @@ av_list="./av_master.txt"
 # Store user input under a more readable name
 tasklist="${1}"
 
+# Setting this to anything other than "true" will turn off showing un-matched processes.
+show_benign="true"
+
 # Vars to hold the color formatting
 Red='\033[0;31m'
 NoClr='\033[0m'
@@ -28,7 +31,7 @@ do
 	if [ $? -eq 0 ]; then
 		match=`printf "${match}"`
 		echo -e "${Red}[+] ${match}${NoClr} matched with ${process}"
-	else
+	elif [ "${show_benign}" == "true" ]; then
 		echo "[-] ${process}"
 	fi
 done
