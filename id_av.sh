@@ -4,9 +4,9 @@
 av_list="./av_master.txt"
 
 # Specify the file to parse.
-tasklist="./sample_tasklist.txt"
+#tasklist="./sample_tasklist.txt"
 # Can use a command line argument instead. Comment the var above and uncomment this one.
-# tasklist="${1}"
+tasklist="${1}"
 
 # Vars to hold the color formatting
 Red='\033[0;31m'
