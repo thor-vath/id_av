@@ -4,7 +4,6 @@ Identify processes related to AV on Windows systems.
 Currently the workflow is:
 1. run `tasklist` on the target system
 1. copy-paste into a file on your local system
-1. edit the `id_av.sh` script to point to the file containing your tasklist dump
-1. run `./id_av.sh` and cross your fingers.
+1. run `./id_av.sh sample_tasklist.txt` and cross your fingers. Replace `sample_tasklist.txt` with the output of `tasklist` from your compromised system.
 
-You'll probably get a few hits on the `System` and `System Idle Process`, it's alpha AF. ¯\_(ツ)_/¯
+If you don't clean up the output of your tasklist you'll probably get a few hits on the `System` and `System Idle Process`, it's ¯\\_(ツ)_/¯
